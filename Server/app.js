@@ -38,7 +38,6 @@ for (var i = 0; i < 7; i++) {
 
 	body[i]['kinect']     = '';
 	body[i]['oculus']     = '';
-	body[i]['leap_left']  = '';
 	body[i]['leap_right'] = '';
 }
 
@@ -56,9 +55,10 @@ app.post('/kinect', function(req, res) {
 	// console.log('bodyIndex: ' + bodyIndex);
 
 	body[bodyIndex]['kinect'] = data;
-	console.log(body[bodyIndex]['kinect']);
+	// console.log(body[bodyIndex]['kinect']);
 
 	var response = '';
+	console.log(response);
 	for (var i = 0; i < 7; i++) {
 		response += body[i]['kinect']     + "\n";
 		response += body[i]['oculus']     + "\n";
@@ -80,9 +80,10 @@ app.post('/oculus', function(req, res) {
 	// console.log('bodyIndex: ' + bodyIndex);
 
 	body[bodyIndex]['oculus'] = data;
-	console.log(body[bodyIndex]['oculus']);
+	// console.log(body[bodyIndex]['oculus']);
 
 	var response = '';
+	console.log(response);
 	for (var i = 0; i < 7; i++) {
 		response += body[i]['kinect']     + "\n";
 		response += body[i]['oculus']     + "\n";
@@ -104,7 +105,21 @@ app.post('/leap/right', function(req, res) {
 	// console.log('bodyIndex: ' + bodyIndex);
 
 	body[bodyIndex]['leap_right'] = data;
-	console.log(body[bodyIndex]['leap_right']);
+	// console.log(body[bodyIndex]['leap_right']);
+
+	var response = '';
+	console.log(response);
+	for (var i = 0; i < 7; i++) {
+		response += body[i]['kinect']     + "\n";
+		response += body[i]['oculus']     + "\n";
+		response += body[i]['leap_right'] + "\n";
+	}
+	// response += body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right'];
+	res.send(response);
+});
+
+app.get('/status', function(req, res) {
+	// TODO: Post data in MongoDB server
 
 	var response = '';
 	for (var i = 0; i < 7; i++) {

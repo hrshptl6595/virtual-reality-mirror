@@ -63,7 +63,7 @@ public class HandController : MonoBehaviour {
 //					data["username"] = "myUser";
 //					data["password"] = "myPassword";
 					data["data"] = handFingers;
-					var response = wb.UploadValues("http://10.1.41.246:3000/leap/right", "POST", data);
+					var response = wb.UploadValues("http://localhost:3000/leap/right", "POST", data);
 					var worldState = Encoding.ASCII.GetString(response);
 				}
 			}
