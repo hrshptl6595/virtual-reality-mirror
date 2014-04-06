@@ -32,10 +32,15 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-body1 = [];
-body1['kinect'] = '';
-body1['oculus'] = '';
-body1['leap'] = '';
+body = [];
+for (var i = 0; i < 6; i++) {
+	body[i] = [];	
+
+	body[i]['kinect']     = '';
+	body[i]['oculus']     = '';
+	body[i]['leap_left']  = '';
+	body[i]['leap_right'] = '';
+}
 
 app.get('/', routes.index);
 
@@ -43,75 +48,52 @@ app.post('/kinect', function(req, res) {
 	// TODO: Post data in MongoDB server
 
 	var data = req.body.data;
-	body1['kinect'] = data;
-	console.log(body1['kinect']);
 
-	res.send(body1['kinect']);
+	var bodyLine = data.substring(0, data.indexOf("\n"));
+	var bodyData = bodyLine.split(":");
+	var bodyIndex = bodyData[1];
+
+	console.log('bodyIndex: ' + bodyIndex);
+
+	body[bodyIndex]['kinect'] = data;
+	console.log(body[bodyIndex]['kinect']);
+
+	res.send(body[bodyIndex]['kinect'] + "\n" + body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right']);
 });
 
 app.post('/oculus', function(req, res) {
 	// TODO: Post data in MongoDB server
 
-	var name = req.body.data;
-	console.log(name);
-
 	var data = req.body.data;
-	body1['oculus'] = data;
-	console.log(data);
 
-	res.send(body1['kinect']);
-});
+	var bodyLine = data.substring(0, data.indexOf("\n"));
+	var bodyData = bodyLine.split(":");
+	var bodyIndex = bodyData[1];
 
-app.post('/leap/left', function(req, res) {
-	// TODO: Post data in MongoDB server
+	console.log('bodyIndex: ' + bodyIndex);
 
-	res.setHeader('Content-Type', 'application/json');
-	res.end(JSON.stringify({
-		left_arm: 1,
-		right_arm: 2,
-		left_leg: 3,
-		right_leg: 2,
-		left_hand: 4,
-		right_hand: 5
-	}));
+	body[bodyIndex]['oculus'] = data;
+	console.log(body[bodyIndex]['oculus']);
+
+	res.send(body[bodyIndex]['kinect'] + "\n" + body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right']);
 });
 
 app.post('/leap/right', function(req, res) {
 	// TODO: Post data in MongoDB server
 
-	res.setHeader('Content-Type', 'application/json');
-	res.end(JSON.stringify({
-		left_arm: 1,
-		right_arm: 2,
-		left_leg: 3,
-		right_leg: 2,
-		left_hand: 4,
-		right_hand: 5
-	}));
-});
+	var data = req.body.data;
 
-app.get('/kinect/latest', function(req, res){
-  res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify({
-  	left_arm: 1,
-  	right_arm: 2,
-  	left_leg: 3,
-  	right_leg: 2,
-  	left_hand: 4,
-  	right_hand: 5
-  }));
-});
+	var bodyLine = data.substring(0, data.indexOf("\n"));
+	var bodyData = bodyLine.split(":");
+	var bodyIndex = bodyData[1];
 
-// app.get('/player', function(req, res){
-//   res.setHeader('Content-Type', 'application/json');
-//   res.end(JSON.stringify({
-//   	id: 44,
-//   	position: {
-//   		x: 4,
-//   		y: 8
-//   	},
-//   }));
-// });
+	console.log('bodyIndex: ' + bodyIndex);
+
+	body[bodyIndex]['leap_right'] = data;
+	console.log(body[bodyIndex]['leap_right']);
+
+	res.send(body[bodyIndex]['kinect'] + "\n" + body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right']);
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Virtual self listening on port ' + app.get('port'));
