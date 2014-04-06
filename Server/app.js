@@ -53,7 +53,7 @@ app.post('/kinect', function(req, res) {
 	var bodyData = bodyLine.split(":");
 	var bodyIndex = bodyData[1];
 
-	console.log('bodyIndex: ' + bodyIndex);
+	// console.log('bodyIndex: ' + bodyIndex);
 
 	body[bodyIndex]['kinect'] = data;
 	console.log(body[bodyIndex]['kinect']);
@@ -77,7 +77,7 @@ app.post('/oculus', function(req, res) {
 	var bodyData = bodyLine.split(":");
 	var bodyIndex = bodyData[1];
 
-	console.log('bodyIndex: ' + bodyIndex);
+	// console.log('bodyIndex: ' + bodyIndex);
 
 	body[bodyIndex]['oculus'] = data;
 	console.log(body[bodyIndex]['oculus']);
@@ -101,7 +101,7 @@ app.post('/leap/right', function(req, res) {
 	var bodyData = bodyLine.split(":");
 	var bodyIndex = bodyData[1];
 
-	console.log('bodyIndex: ' + bodyIndex);
+	// console.log('bodyIndex: ' + bodyIndex);
 
 	body[bodyIndex]['leap_right'] = data;
 	console.log(body[bodyIndex]['leap_right']);
