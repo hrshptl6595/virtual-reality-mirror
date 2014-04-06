@@ -58,13 +58,13 @@ app.post('/kinect', function(req, res) {
 	// console.log(body[bodyIndex]['kinect']);
 
 	var response = '';
-	console.log(response);
 	for (var i = 0; i < 7; i++) {
 		response += body[i]['kinect']     + "\n";
 		response += body[i]['oculus']     + "\n";
 		response += body[i]['leap_right'] + "\n";
 	}
 	// response += body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right'];
+	console.log(response);
 	res.send(response);
 });
 
@@ -83,13 +83,13 @@ app.post('/oculus', function(req, res) {
 	// console.log(body[bodyIndex]['oculus']);
 
 	var response = '';
-	console.log(response);
 	for (var i = 0; i < 7; i++) {
 		response += body[i]['kinect']     + "\n";
 		response += body[i]['oculus']     + "\n";
 		response += body[i]['leap_right'] + "\n";
 	}
 	// response += body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right'];
+	console.log(response);
 	res.send(response);
 });
 
@@ -108,13 +108,13 @@ app.post('/leap/right', function(req, res) {
 	// console.log(body[bodyIndex]['leap_right']);
 
 	var response = '';
-	console.log(response);
 	for (var i = 0; i < 7; i++) {
 		response += body[i]['kinect']     + "\n";
 		response += body[i]['oculus']     + "\n";
 		response += body[i]['leap_right'] + "\n";
 	}
 	// response += body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right'];
+	console.log(response);
 	res.send(response);
 });
 
@@ -128,6 +128,7 @@ app.get('/status', function(req, res) {
 		response += body[i]['leap_right'] + "\n";
 	}
 	// response += body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right'];
+	console.log(response);
 	res.send(response);
 });
 
