@@ -33,7 +33,7 @@ if ('development' == app.get('env')) {
 }
 
 body = [];
-for (var i = 0; i < 6; i++) {
+for (var i = 0; i < 7; i++) {
 	body[i] = [];	
 
 	body[i]['kinect']     = '';
