@@ -21,6 +21,7 @@ namespace BodyBasicsWPF
     using System.Collections;
     using System.Collections.Specialized;
     using Microsoft.Kinect;
+    using System.Text;
 
     /// <summary>
     /// Interaction logic for MainWindow
@@ -418,14 +419,17 @@ namespace BodyBasicsWPF
                                     Random random = new Random();
                                     if (random.Next(0, 40) == 4)
                                     {
-                                        using (var wb = new WebClient())
+                                        using (var client = new WebClient())
                                         {
                                             var data = new NameValueCollection();
+                                            string serverAddress = "http://10.1.16.170:3000/kinect";
+
                                             data["username"] = "myUser";
                                             data["password"] = "myPassword";
                                             data["data"] = "Body:" + body_num.ToString() + "\n" + sURL;
-                                            var response = wb.UploadValues("http://10.1.16.170:3000/kinect", "POST", data);
-                                            Console.WriteLine("Response: " + response);
+                                            //var response = client.UploadValues(serverAddress, "POST", data);
+                                            byte[] responseArray = client.UploadValues(serverAddress, data);
+                                            Console.WriteLine("\nResponse received was :\n{0}", Encoding.ASCII.GetString(responseArray));
                                         }
                                     }
                                 }
