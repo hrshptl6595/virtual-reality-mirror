@@ -32,25 +32,21 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+body1 = [];
+body1['kinect'] = '';
+body1['oculus'] = '';
+body1['leap'] = '';
+
 app.get('/', routes.index);
 
 app.post('/kinect', function(req, res) {
 	// TODO: Post data in MongoDB server
 
-	var name = req.body.data;
-	console.log(name);
+	var data = req.body.data;
+	body1['kinect'] = data;
+	console.log(body1['kinect']);
 
-	res.send(req.body.data);
-
-	// res.setHeader('Content-Type', 'application/json');
-	// res.end(JSON.stringify({
-	// 	expression: "smile",
-	// 	right_arm: 2,
-	// 	left_leg: 3,
-	// 	right_leg: 2,
-	// 	left_hand: 4,
-	// 	right_hand: 5
-	// }));
+	res.send(body1['kinect']);
 });
 
 app.post('/oculus', function(req, res) {
@@ -59,9 +55,19 @@ app.post('/oculus', function(req, res) {
 	var name = req.body.data;
 	console.log(name);
 
+	var data = req.body.data;
+	body1['oculus'] = data;
+	console.log(data);
+
+	res.send(body1['kinect']);
+});
+
+app.post('/leap/left', function(req, res) {
+	// TODO: Post data in MongoDB server
+
 	res.setHeader('Content-Type', 'application/json');
 	res.end(JSON.stringify({
-		expression: "smile",
+		left_arm: 1,
 		right_arm: 2,
 		left_leg: 3,
 		right_leg: 2,
@@ -70,7 +76,7 @@ app.post('/oculus', function(req, res) {
 	}));
 });
 
-app.post('/player', function(req, res) {
+app.post('/leap/right', function(req, res) {
 	// TODO: Post data in MongoDB server
 
 	res.setHeader('Content-Type', 'application/json');
@@ -96,17 +102,17 @@ app.get('/kinect/latest', function(req, res){
   }));
 });
 
-app.get('/player', function(req, res){
-  res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify({
-  	id: 44,
-  	position: {
-  		x: 4,
-  		y: 8
-  	},
-  }));
-});
+// app.get('/player', function(req, res){
+//   res.setHeader('Content-Type', 'application/json');
+//   res.end(JSON.stringify({
+//   	id: 44,
+//   	position: {
+//   		x: 4,
+//   		y: 8
+//   	},
+//   }));
+// });
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+  console.log('Virtual self listening on port ' + app.get('port'));
 });
