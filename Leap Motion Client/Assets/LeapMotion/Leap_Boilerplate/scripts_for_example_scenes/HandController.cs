@@ -60,8 +60,8 @@ public class HandController : MonoBehaviour {
 			if (fingers.GetLength(0) > 0) {
 				using (var wb = new WebClient()) {
 					var data = new NameValueCollection();
-					data["username"] = "myUser";
-					data["password"] = "myPassword";
+//					data["username"] = "myUser";
+//					data["password"] = "myPassword";
 					data["data"] = handFingers;
 					var response = wb.UploadValues("http://10.1.41.246:3000/leap/right", "POST", data);
 					var worldState = Encoding.ASCII.GetString(response);

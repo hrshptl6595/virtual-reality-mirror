@@ -58,7 +58,14 @@ app.post('/kinect', function(req, res) {
 	body[bodyIndex]['kinect'] = data;
 	console.log(body[bodyIndex]['kinect']);
 
-	res.send(body[bodyIndex]['kinect'] + "\n" + body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right']);
+	var response = '';
+	for (var i = 0; i < 7; i++) {
+		response += body[i]['kinect']     + "\n";
+		response += body[i]['oculus']     + "\n";
+		response += body[i]['leap_right'] + "\n";
+	}
+	// response += body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right'];
+	res.send(response);
 });
 
 app.post('/oculus', function(req, res) {
@@ -75,7 +82,14 @@ app.post('/oculus', function(req, res) {
 	body[bodyIndex]['oculus'] = data;
 	console.log(body[bodyIndex]['oculus']);
 
-	res.send(body[bodyIndex]['kinect'] + "\n" + body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right']);
+	var response = '';
+	for (var i = 0; i < 7; i++) {
+		response += body[i]['kinect']     + "\n";
+		response += body[i]['oculus']     + "\n";
+		response += body[i]['leap_right'] + "\n";
+	}
+	// response += body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right'];
+	res.send(response);
 });
 
 app.post('/leap/right', function(req, res) {
@@ -92,7 +106,14 @@ app.post('/leap/right', function(req, res) {
 	body[bodyIndex]['leap_right'] = data;
 	console.log(body[bodyIndex]['leap_right']);
 
-	res.send(body[bodyIndex]['kinect'] + "\n" + body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right']);
+	var response = '';
+	for (var i = 0; i < 7; i++) {
+		response += body[i]['kinect']     + "\n";
+		response += body[i]['oculus']     + "\n";
+		response += body[i]['leap_right'] + "\n";
+	}
+	// response += body[bodyIndex]['oculus'] + "\n" + body[bodyIndex]['leap_right'];
+	res.send(response);
 });
 
 http.createServer(app).listen(app.get('port'), function(){
