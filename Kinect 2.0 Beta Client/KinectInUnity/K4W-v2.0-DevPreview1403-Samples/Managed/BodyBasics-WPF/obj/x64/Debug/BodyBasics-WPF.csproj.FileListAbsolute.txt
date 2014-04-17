@@ -1,0 +1,26 @@
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\bin\x64\Debug\BodyBasics-WPF.exe.config
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\bin\x64\Debug\BodyBasics-WPF.exe
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\bin\x64\Debug\BodyBasics-WPF.pdb
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.csprojResolveAssemblyReference.cache
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\MainWindow.baml
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\MainWindow.g.cs
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\App.g.cs
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF_MarkupCompile.cache
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.g.resources
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasicsWPF.Properties.Resources.resources
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.csproj.GenerateResource.Cache
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.exe
+C:\Users\Vincent Wu\Desktop\Kinect 2\samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.pdb
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\bin\x64\Debug\BodyBasics-WPF.exe.config
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\bin\x64\Debug\BodyBasics-WPF.exe
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\bin\x64\Debug\BodyBasics-WPF.pdb
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.csprojResolveAssemblyReference.cache
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\MainWindow.baml
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\MainWindow.g.cs
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\App.g.cs
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF_MarkupCompile.cache
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.g.resources
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasicsWPF.Properties.Resources.resources
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.csproj.GenerateResource.Cache
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.exe
+F:\Kinect 2\K4W-v2.0-DevPreview1403-Samples\Managed\BodyBasics-WPF\obj\x64\Debug\BodyBasics-WPF.pdb
